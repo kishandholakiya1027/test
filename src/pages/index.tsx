@@ -68,10 +68,10 @@ const handleMouseOut=()=>{
             </div>
             <div className="col-span-2 lg:pl-[39px] lg:border-l border-[#B1B1B1]/40" >
               <div className="flex flex-col gap-5 text-sm" >
-                <p className="lg:text-sm text-xs mt-2">The Kalp Decentra Foundation stands at the forefront of the blockchain revolution, pioneering a new era of Digital Public Infrastructure. We are not just building technology; we're architecting the future of global digital interaction.</p>
+                <p className="lg:text-sm text-xs mt-2">The Kalp Decentra Foundation stands at the forefront of the blockchain revolution, pioneering a new era of Digital Public Infrastructure. We are not just building technology; we&apos;re architecting the future of global digital interaction.</p>
                 <div className="lg:text-md text-xs" >
                   <p>
-                    Our mission? To create a decentralized ecosystem that's as secure as it is inclusive, as innovative as it is compliant.</p>
+                    Our mission? To create a decentralized ecosystem that&apos;s as secure as it is inclusive, as innovative as it is compliant.</p>
 
                   <p className="font-bold">At Kalp, we believe in:</p>
                   <div className="flex flex-col">
@@ -83,7 +83,7 @@ const handleMouseOut=()=>{
 
                 </div>
                 <p className="lg:text-md text-xs" >
-                  We're unique in our 'compliance-first' approach, embedding regulatory adherence into our DNA. Our ecosystem isn't just about technology—it's about empowering communities, fostering innovation, and creating a level playing field in the digital realm.
+                  We&apos;re unique in our &apos;compliance-first&apos; approach, embedding regulatory adherence into our DNA. Our ecosystem isn&apos;t just about technology&apos;it&apos;s about empowering communities, fostering innovation, and creating a level playing field in the digital realm.
                 </p>
               </div>
             </div>

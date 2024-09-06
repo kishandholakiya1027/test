@@ -214,8 +214,8 @@ export default function Blogs() {
                     <div className="mt-12" >
                         <p className="lg:text-2xl text-lg  font-semibold">All blog posts</p>
                         <div className="grid grid-cols-3 gap-4 " >
-                            {data?.map((item: any) => (
-                                <div className="lg:col-span-1 col-span-3 mt-6" >
+                            {data?.map((item: any,index:number) => (
+                                <div key={index} className="lg:col-span-1 col-span-3 mt-6" >
                                     <div className="lg:w-[390px] w-[337px]" >
                                         <Image src={item?.image} alt="kalp Logo" className="" />
 

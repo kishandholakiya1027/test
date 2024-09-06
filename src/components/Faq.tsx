@@ -59,7 +59,7 @@ const Faq: React.FC = () => {
         <div className=" mx-auto mt-16">
       
       {accordionData.map((item, index) => (
-             <div className="border-b border-gray-200 lg:py-2 lg:px-9">
+             <div key={index} className="border-b border-gray-200 lg:py-2 lg:px-9">
              <button
                onClick={() => handleToggle(index)}
                className="w-full text-left py-4 flex justify-between items-center"

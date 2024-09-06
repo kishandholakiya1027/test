@@ -29,9 +29,10 @@ export default function Vision() {
       >
         <div className='flex flex-col justify-center'>
           <p className='text-3xl font-bold'>Our Vision</p>
-          <p className='text-md  mt-10'>
-            We envision a world where decentralized technology democratizes digital access, empowering everyone to participate in a fair, transparent global economy. With our 'compliance-first' approach, we set the standard for responsible blockchain, enhancing trust, reducing inequality, and driving positive change.
-          </p>
+          <p className='text-md mt-10'>
+  We envision a world where decentralized technology democratizes digital access, empowering everyone to participate in a fair, transparent global economy. With our compliance-first approach, we set the standard for responsible blockchain, enhancing trust, reducing inequality, and driving positive change.
+</p>
+
         </div>
       </div>
 
@@ -55,10 +56,11 @@ export default function Vision() {
          <div
            className={`lg:absolute lg:inset-0 flex z-0 items-center justify-center transition-transform duration-[1500ms] ${transitioned ? 'translate-x-[56%]' : 'translate-x-0'}`}
          >
+
            <div className='flex flex-col justify-center mt-4 '>
              <p className='lg:text-3xl text-md font-bold'>Our Vision</p>
              <p className='lg:text-md text-xs  lg:mt-10 mt-4'>
-               We envision a world where decentralized technology democratizes digital access, empowering everyone to participate in a fair, transparent global economy. With our 'compliance-first' approach, we set the standard for responsible blockchain, enhancing trust, reducing inequality, and driving positive change.
+             We envision a world where decentralized technology democratizes digital access, empowering everyone to participate in a fair, transparent global economy. With our compliance-first approach, we set the standard for responsible blockchain, enhancing trust, reducing inequality, and driving positive change.
              </p>
            </div>
          </div>

@@ -131,7 +131,7 @@ transitioning ? "opacity-0 scale-95" : "opacity-100 scale-100"
                     <ul className="list-decimal list-inside text-start mt-4 pl-3 space-y-4">
                         <li className="">
                             <span className="text-md">Compliance-First Approach:</span> We believe innovation thrives within ethical and legal frameworks.
-                        </li>
+                        </li>   
                         <li className="">
                             <span className="text-md">Transparency:</span> We commit to open governance and clear communication in all our operations.
                         </li>
@@ -142,7 +142,7 @@ transitioning ? "opacity-0 scale-95" : "opacity-100 scale-100"
                             <span className="text-md">Sustainability:</span> Our commitment to the environment is embedded in our technological solutions.
                         </li>
                         <li className="">
-                            <span className="text-md">Innovation:</span> We continuously push the boundaries of what's possible in decentralized technology.
+                            <span className="text-md">Innovation:</span> We continuously push the boundaries of whats possible in decentralized technology.
                         </li>
                         <li className="">
                             <span className="text-md">Community-Driven:</span> We believe in the power of collective wisdom and shared governance.
@@ -182,7 +182,7 @@ transitioning ? "opacity-0 scale-95" : "opacity-100 scale-100"
                                     For a detailed look at our governance structure, please review our full Governance Framework Document.
                                 </p>
                                 <p className="mt-4">
-                                    Join us in our mission to create a more equitable, secure, and innovative digital future. Together, we're not just building technology – we're shaping the future of global digital interaction.
+                                    Join us in our mission to create a more equitable, secure, and innovative digital future. Together, we are not just building technology – we are shaping the future of global digital interaction.
                                 </p>
                             </div>
                         </div>
@@ -206,7 +206,7 @@ transitioning ? "opacity-0 scale-95" : "opacity-100 scale-100"
                 <div className="" >
                     {
                         text?.map((data: any, index: any) => (
-                            <div className={`text-[23px] pb-6 ${index === 3 ? '' : 'border-b border-[#B1B1B1]/40'} transition-transform duration-[1500ms] cursor-pointer ${data === select ? 'font-semibold ' : 'text-[#B1B1B1]/40'} mb-6`} onClick={() => setSelect(data)} >
+                            <div key={index} className={`text-[23px] pb-6 ${index === 3 ? '' : 'border-b border-[#B1B1B1]/40'} transition-transform duration-[1500ms] cursor-pointer ${data === select ? 'font-semibold ' : 'text-[#B1B1B1]/40'} mb-6`} onClick={() => setSelect(data)} >
                                 <p >{data}</p>
                             </div>
                         ))
