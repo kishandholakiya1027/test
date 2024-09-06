@@ -71,7 +71,7 @@ const handleMouseOut=()=>{
                 <p className="lg:text-sm text-xs mt-2">The Kalp Decentra Foundation stands at the forefront of the blockchain revolution, pioneering a new era of Digital Public Infrastructure. We are not just building technology; we&apos;re architecting the future of global digital interaction.</p>
                 <div className="lg:text-md text-xs" >
                   <p>
-                    Our mission? To create a decentralized ecosystem that&apos;s as secure as it is inclusive, as innovative as it is compliant.</p>
+                  Our mission? To create a decentralized ecosystem that&apos;s as secure as it is inclusive, as innovative as it is compliant.</p>
 
                   <p className="font-bold">At Kalp, we believe in:</p>
                   <div className="flex flex-col">
