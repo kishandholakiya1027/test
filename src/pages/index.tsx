@@ -1,118 +1,101 @@
+import Header from "@/components/Header";
 import Image from "next/image";
-import { Inter } from "next/font/google";
+import bannerImg from "../../public/images/Frame 1410125009.jpg";
+import bannerImg2 from "../../public/images/bannerImg.jpg";
+import bannerImgMobile from "../../public/images/bannerBlackMobile.jpg";
+import bannerImg2Mobile from "../../public/images/bannerMobile.jpg";
+import egdeImg from "../../public/images/egde.png";
+import { useEffect, useState } from "react";
+import Footer from "@/components/Footer";
+import Vision from "@/components/Vision";
+import AboutUs from "@/components/AboutUs";
+import Dpi from "@/components/Dpi";
+import EcoSystem from "@/components/EcoSystem";
+import Accordion from "@/components/Accordion";
+import Faq from "@/components/Faq";
 
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const [src, setSrc] = useState<any>();
+  useEffect(()=>{
+if(window.innerWidth < 768){
+  setSrc(bannerImgMobile);
+} else {
+  setSrc(bannerImg);
+}
+  },[])
+const handleMouseOver=()=>{
+  if(window.innerWidth < 768){
+    setSrc(bannerImg2Mobile);
+  } else {
+    setSrc(bannerImg2);
+  }
+}
+const handleMouseOut=()=>{
+  if(window.innerWidth < 640){
+    setSrc(bannerImgMobile);
+  } else {
+    setSrc(bannerImg);
+  }
+}
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/pages/index.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <>
+      <div className="w-full">
+        <Header />
+        <div className="lg:px-10 px-4" >
+          <div className="relative"
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut }
+            onTouchStart={handleMouseOver}
+            onTouchEnd={handleMouseOut }
+            
           >
-            By{" "}
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+              src={src}
+              alt="kalp Logo"
             />
-          </a>
+            <Image
+              src={egdeImg}
+              alt="kalp Logo"
+              className="absolute lg:bottom-4 bottom-3 lg:left-4 left-2 lg:w-[35%] w-[60%]"
+            />
+          </div>
+
+          <div className="lg:grid grid-cols-3 lg:mt-28 mt-6">
+            <div className="col-span-1 " >
+              <p className="lg:text-[32px] text-md font-bold" >About KALP Foundation</p>
+              <p className="lg:text-2xl text-sm lg:mt-4 mt-2 lg:mr-28" >Architecting the Future of Digital Inclusivity</p>
+            </div>
+            <div className="col-span-2 lg:pl-[39px] lg:border-l border-[#B1B1B1]/40" >
+              <div className="flex flex-col gap-5 text-sm" >
+                <p className="lg:text-sm text-xs mt-2">The Kalp Decentra Foundation stands at the forefront of the blockchain revolution, pioneering a new era of Digital Public Infrastructure. We are not just building technology; we're architecting the future of global digital interaction.</p>
+                <div className="lg:text-md text-xs" >
+                  <p>
+                    Our mission? To create a decentralized ecosystem that's as secure as it is inclusive, as innovative as it is compliant.</p>
+
+                  <p className="font-bold">At Kalp, we believe in:</p>
+                  <div className="flex flex-col">
+                    <p>• Decentralization with accountability</p>
+                    <p>• Innovation within regulatory frameworks</p>
+                    <p>• Global accessibility with local relevance</p>
+                  </div>
+
+
+                </div>
+                <p className="lg:text-md text-xs" >
+                  We're unique in our 'compliance-first' approach, embedding regulatory adherence into our DNA. Our ecosystem isn't just about technology—it's about empowering communities, fostering innovation, and creating a level playing field in the digital realm.
+                </p>
+              </div>
+            </div>
+          </div>
+          <Vision />
+          <AboutUs />
+          {/* <Dpi/> */}
+          <EcoSystem/> 
+          <Faq/>
         </div>
+        <Footer />
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </>
   );
 }
