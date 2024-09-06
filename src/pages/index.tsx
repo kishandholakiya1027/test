@@ -91,7 +91,7 @@ const handleMouseOut=()=>{
           <Vision />
           <AboutUs />
           {/* <Dpi/> */}
-          <EcoSystem/> 
+          {/* <EcoSystem/>  */}
           <Faq/>
         </div>
         <Footer />

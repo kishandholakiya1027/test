@@ -65,7 +65,7 @@ const Faq: React.FC = () => {
                className="w-full text-left py-4 flex justify-between items-center"
              >
                <span className="lg:text-[16px] text-sm font-semibold pr-3">{item.title}</span>
-              <div className='h-5 w-5' > 
+              <div className='h-5 w-8  flex justify-end text-end' > 
                 {
                     openAccordionIndex === index ? 
                     <Image src={arrowUp} alt="kalp Logo" className="" /> : 

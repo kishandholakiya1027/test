@@ -201,7 +201,7 @@ export default function Blogs() {
                                         </p>
                                         <p className="mt-4 text-[15px]">
                                             A grid system is a design tool used to arrange content on a webpage. It is a series of vertical and horizontal lines that create a matrix of intersecting points, which can be used to align and organize page elements. Grid systems are used to create a consistent look and feel across a website, and can help to make the layout more visually appealing and easier to navigate.                                        </p>
-                                        <p className=" mt-4 text-2xl underline cursor-pointer font-semibold transition-transform duration-300 group-hover:translate-x-2">
+                                        <p className=" mt-4 text-2xl underline cursor-pointer font-semibold transition-transform duration-300 group-hover:translate-x-2" onClick={() => router.push('/blogDetail')}>
                                             Read More
                                         </p>
                                     </div>
@@ -216,7 +216,7 @@ export default function Blogs() {
                         <div className="grid grid-cols-3 gap-4 " >
                             {data?.map((item: any,index:number) => (
                                 <div key={index} className="lg:col-span-1 col-span-3 mt-6" >
-                                    <div className="lg:w-[390px] w-[337px]" >
+                                    <div className="lg:w-[390px] w-[344px]" >
                                         <Image src={item?.image} alt="kalp Logo" className="" />
 
                                     </div>
@@ -232,7 +232,7 @@ export default function Blogs() {
                                                 alt="Arrow Icon"
                                                 className="h-3 transform -translate-x-4 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
                                             />
-                                            <p className="lg:text-2xl text-xl underline cursor-pointer font-semibold transition-transform duration-300 group-hover:translate-x-2">
+                                            <p className="lg:text-2xl text-xl underline cursor-pointer font-semibold transition-transform duration-300 group-hover:translate-x-2" onClick={() => router.push('/blogDetail')}>
                                                 Read More
                                             </p>
                                         </div>
