@@ -8,7 +8,6 @@ const Team: React.FC = () => {
     const [expanded, setExpanded] = useState(false);
     const aboutUsRef = useRef<HTMLDivElement>(null);
 
-
   const data = [
     {
       name: "Pradeep Kumar Sama",

@@ -66,6 +66,12 @@ const StrategicInitiatives: React.FC = () => {
 
   const slides = [
     {
+      title: 'KALP Ecosystem Development',
+      description: 'Continuously evolving our permissioned Distributed Ledger Technology (DLT) platform., Enhancing the Kalp Virtual Machine (KVM) for optimized transaction throughput.',
+
+      backgroundImage: slideImg
+    },
+    {
       title: 'Kalpify Platform',
       description: 'Continuously evolving our permissioned Distributed Ledger Technology (DLT) platform., Enhancing the Kalp Virtual Machine (KVM) for optimized transaction throughput.',
       backgroundImage: slideImg
@@ -88,12 +94,7 @@ const StrategicInitiatives: React.FC = () => {
 
       backgroundImage: slideImg
     },
-    {
-      title: 'KALP Ecosystem Development',
-      description: 'Continuously evolving our permissioned Distributed Ledger Technology (DLT) platform., Enhancing the Kalp Virtual Machine (KVM) for optimized transaction throughput.',
-
-      backgroundImage: slideImg
-    },
+  
   ];
 
   return (
@@ -116,7 +117,7 @@ const StrategicInitiatives: React.FC = () => {
                 {activeSlide === index ? (
                   <div className='flex flex-col gap-3  top-4 ' style={{width:500}}>
                     <h3 className="text-xl font-bold mb-4">{slides[activeSlide].title}</h3>
-                    <ul className="list-disc pl-5 lg:text-md text-xs ">
+                    <ul className="list-disc pl-5 lg:text-[15px] leading-[20px] text-xs ">
                       <li>{part1.trim()}{part2 && part2.trim() ? ',' : ''}</li>
                       {part2 && <li className='mt-3' >{part2.trim()}</li>}
                     </ul>
@@ -149,7 +150,6 @@ const StrategicInitiatives: React.FC = () => {
           className="px-4 py-2 bg-[#393939] text-white rounded-r-full hover:bg-gray-600 transition duration-300"
         >
                 <Image src={right} alt={''}/>
-
         </button>
       </div>
     </div>

@@ -3,6 +3,8 @@ import ecoImg from "../../public/images/eco.jpg";
 import cecoImg from "../../public/images/ceco.jpg";
 import ecoImage from "../../public/images/ecoMobile.jpg";
 import dynamic from 'next/dynamic'
+import arrow from "../../public/images/whiteArrow.png";
+
 
 
 import { useEffect, useState } from "react";
@@ -39,7 +41,7 @@ const EcoSystem: React.FC = () => {
 
                     </div>
                     <div className="absolute bottom-0 bg-black w-full lg:h-20 h-12" >
-                        <div className="flex hidden inline-block flex-wrap justify-center ">
+                    {isDesktop ? <div className="flex  flex-wrap justify-center ">
                             {/* Content goes here */}
                             <div className="relative h-[1px] w-1/2 ">
                                 <div className="absolute inset-0 bg-[#464646]"></div>
@@ -50,8 +52,15 @@ const EcoSystem: React.FC = () => {
                                 <div className="absolute inset-0 bg-gradient-to-l from-transparent from-[#464646] w-10 ml-auto"></div>
                             </div>
 
-                        </div>
-                        <p className="text-center lg:text-2xl text-xl underline decoration-1 text-white font-semibold lg:mt-8 mt-2 cursor-pointer" > More About KALP</p>
+                        </div> : null}
+                        <div className="flex items-center justify-center gap-2 lg:mt-4 group">
+                        <Image
+                                        src={arrow}
+                                        alt="Arrow Icon"
+                                        className="h-4 w-5 mt-6  transform -translate-x-4 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
+                                    />
+                        <p className="text-center lg:text-2xl text-xl underline decoration-1 text-white font-semibold lg:mt-5  cursor-pointer" > More About KALP</p>
+                    </div>
                     </div>
                 </div>
 

@@ -242,9 +242,9 @@ const AnimatedImageBox: React.FC<AnimatedImageBoxProps> = ({
         className="absolute flex flex-col gap-3 lg:bottom-10 bottom-2  px-4 text-white z-10"
       >
         <p className=" lg:text-xl text-sm  font-semibold">{title}</p>
-        <p className="lg:text-md text-sm">{description}</p>
+        <p className="lg:text-[16px] text-[12px]">{description}</p>
       </div>
-    </div></> }
+   </div></> }
     
     </div>
   );
