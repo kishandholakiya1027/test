@@ -1,98 +1,148 @@
-import Header from "@/components/Header";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import bannerImg from "../../public/images/Frame 1410125009.jpg";
-import bannerImg2 from "../../public/images/bannerImg.jpg";
+import { gsap } from "gsap";
+import bannerImg from "../../public/assets/hero banner/black and white/hero banner_black and white.png";
+import bannerImg2 from "../../public/assets/hero banner/colored/hero banner_colored.png";
 import bannerImgMobile from "../../public/images/bannerBlackMobile.jpg";
 import bannerImg2Mobile from "../../public/images/bannerMobile.jpg";
-import egdeImg from "../../public/images/egde.png";
-import { useEffect, useState } from "react";
+import edgeImg from "../../public/images/egde.png";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Vision from "@/components/Vision";
 import AboutUs from "@/components/AboutUs";
-import Dpi from "@/components/Dpi";
-import EcoSystem from "@/components/EcoSystem";
-import Accordion from "@/components/Accordion";
+import GiniToken from "@/components/GiniToken";
+import Team from "@/components/team";
+import NewsMedia from "@/components/newsAndMedia";
+import Blogs from "@/components/Blogs";
+import GetInvolvedSection from "@/components/InvolvedSection";
 import Faq from "@/components/Faq";
-
+import EcoSystem from "@/components/EcoSystem";
+import StrategicInitiatives from "@/components/strategic";
+import Dpi from "@/components/Dpi";
 
 export default function Home() {
-  const [src, setSrc] = useState<any>();
-  useEffect(()=>{
-if(window.innerWidth < 768){
-  setSrc(bannerImgMobile);
-} else {
-  setSrc(bannerImg);
-}
-  },[])
-const handleMouseOver=()=>{
-  if(window.innerWidth < 768){
-    setSrc(bannerImg2Mobile);
-  } else {
-    setSrc(bannerImg2);
-  }
-}
-const handleMouseOut=()=>{
-  if(window.innerWidth < 640){
-    setSrc(bannerImgMobile);
-  } else {
-    setSrc(bannerImg);
-  }
-}
+  const [src, setSrc] = useState(bannerImg);
+  const imageRef = useRef(null);
+
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      setSrc(bannerImgMobile);
+    } else {
+      setSrc(bannerImg);
+    }
+  }, []);
+
+  const handleMouseOver = () => {
+    if (window.innerWidth < 768) {
+      gsap.to(imageRef.current, {
+        opacity: 0,
+        duration: 0.2,
+        onComplete: () => setSrc(bannerImg2Mobile),
+      });
+      gsap.to(imageRef.current, { opacity: 1, delay: 0.2, duration: 0.2 });
+    } else {
+      gsap.to(imageRef.current, {
+        opacity: 0,
+        duration: 0.2,
+        onComplete: () => setSrc(bannerImg2),
+      });
+      gsap.to(imageRef.current, { opacity: 1, delay: 0.2, duration: 0.2 });
+    }
+  };
+
+  const handleMouseOut = () => {
+    if (window.innerWidth < 768) {
+      gsap.to(imageRef.current, {
+        opacity: 0,
+        duration: 0.5,
+        onComplete: () => setSrc(bannerImgMobile),
+      });
+      gsap.to(imageRef.current, { opacity: 1, delay: 0.5, duration: 0.5 });
+    } else {
+      gsap.to(imageRef.current, {
+        opacity: 0,
+        duration: 0.5,
+        onComplete: () => setSrc(bannerImg),
+      });
+      gsap.to(imageRef.current, { opacity: 1, delay: 0.5, duration: 0.5 });
+    }
+  };
+
   return (
     <>
       <div className="w-full">
         <Header />
-        <div className="lg:px-10 px-4" >
-          <div className="relative"
+        <div className="lg:px-10 px-4">
+          <div
+            className="relative"
             onMouseOver={handleMouseOver}
-            onMouseOut={handleMouseOut }
+            onMouseOut={handleMouseOut}
             onTouchStart={handleMouseOver}
-            onTouchEnd={handleMouseOut }
-            
+            onTouchEnd={handleMouseOut}
           >
             <Image
               src={src}
               alt="kalp Logo"
+              className="transition-opacity duration-500 ease-in-out"
+              ref={imageRef}
             />
             <Image
-              src={egdeImg}
+              src={edgeImg}
               alt="kalp Logo"
-              className="absolute lg:bottom-4 bottom-3 lg:left-4 left-2 lg:w-[35%] w-[60%]"
+              className="absolute lg:bottom-4 bottom-3 lg:left-4 left-2 lg:w-[35%] w-[60%] transition-opacity duration-100000 ease-in-out"
             />
           </div>
-
           <div className="lg:grid grid-cols-3 lg:mt-28 mt-6">
-            <div className="col-span-1 " >
-              <p className="lg:text-[32px] text-md font-bold" >About KALP Foundation</p>
-              <p className="lg:text-2xl text-sm lg:mt-4 mt-2 lg:mr-28" >Architecting the Future of Digital Inclusivity</p>
+            <div className="col-span-1">
+              <p className="lg:text-[32px] text-md font-bold">
+                About KALP Foundation
+              </p>
+              <p className="lg:text-2xl text-sm lg:mt-4 mt-2 lg:mr-28">
+                Architecting the Future of Digital Inclusivity
+              </p>
             </div>
-            <div className="col-span-2 lg:pl-[39px] lg:border-l border-[#B1B1B1]/40" >
-              <div className="flex flex-col gap-5 text-sm" >
-                <p className="lg:text-sm text-xs mt-2">The Kalp Decentra Foundation stands at the forefront of the blockchain revolution, pioneering a new era of Digital Public Infrastructure. We are not just building technology; we&apos;re architecting the future of global digital interaction.</p>
-                <div className="lg:text-md text-xs" >
+            <div className="col-span-2 lg:pl-[39px] lg:border-l border-[#B1B1B1]/40">
+              <div className="flex flex-col gap-5 text-sm">
+                <p className="lg:text-sm text-xs mt-2">
+                  The Kalp Decentra Foundation stands at the forefront of the
+                  blockchain revolution, pioneering a new era of Digital Public
+                  Infrastructure. We are not just building technology; we&apos;re
+                  architecting the future of global digital interaction.
+                </p>
+                <div className="lg:text-md text-xs">
                   <p>
-                  Our mission? To create a decentralized ecosystem that&apos;s as secure as it is inclusive, as innovative as it is compliant.</p>
-
+                    Our mission? To create a decentralized ecosystem that&apos;s
+                    as secure as it is inclusive, as innovative as it is
+                    compliant.
+                  </p>
                   <p className="font-bold">At Kalp, we believe in:</p>
                   <div className="flex flex-col">
                     <p>• Decentralization with accountability</p>
                     <p>• Innovation within regulatory frameworks</p>
                     <p>• Global accessibility with local relevance</p>
                   </div>
-
-
                 </div>
-                <p className="lg:text-md text-xs" >
-                  We&apos;re unique in our &apos;compliance-first&apos; approach, embedding regulatory adherence into our DNA. Our ecosystem isn&apos;t just about technology&apos;it&apos;s about empowering communities, fostering innovation, and creating a level playing field in the digital realm.
+                <p className="lg:text-md text-xs">
+                  We&apos;re unique in our &apos;compliance-first&apos; approach,
+                  embedding regulatory adherence into our DNA. Our ecosystem
+                  isn&apos;t just about technology; it&apos;s about empowering
+                  communities, fostering innovation, and creating a level
+                  playing field in the digital realm.
                 </p>
               </div>
             </div>
           </div>
           <Vision />
           <AboutUs />
-          {/* <Dpi/> */}
-          {/* <EcoSystem/>  */}
-          <Faq/>
+          <Dpi/>
+          <EcoSystem />
+          <GiniToken />
+          <StrategicInitiatives/>
+          <Team />
+          <NewsMedia />
+          <Blogs />
+          <GetInvolvedSection />
+          <Faq />
         </div>
         <Footer />
       </div>

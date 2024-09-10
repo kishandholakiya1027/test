@@ -51,7 +51,7 @@ const Faq: React.FC = () => {
 
   return (
     <div>
-        <div className='flex flex-col justify-center items-center mt-28' >
+        <div className='flex flex-col justify-center items-center lg:mt-28 mt-12 ' >
         <h1 className="lg:text-3xl text-md font-bold mb-4">Frequently Asked Questions</h1>
         <p className='text-[15px] text-center' >Common Queries Addressed for Quick Understanding</p>
         </div>
