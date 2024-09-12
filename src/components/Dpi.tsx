@@ -2,13 +2,13 @@ import { useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { gsap } from 'gsap';
 import linesImage from '../../public/images/lines.png';
-import frame from '../../public/images/Frame.png';
-import frameW from '../../public/images/Group.png';
-import frame2 from '../../public/images/Frame (1).png';
-import frame2W from '../../public/images/Frame (5).png';
+import frame from '../../public/images/Frame.svg';
+import frameW from '../../public/images/Group.svg';
+import frame2 from '../../public/images/Frame (1).svg';
+import frame2W from '../../public/images/Frame (5).svg';
 import frame3 from '../../public/images/Frame (2).png';
 import frame3W from '../../public/images/Frame (6).png';
-import frame4 from '../../public/images/Frame (3).png';
+import frame4 from '../../public/images/Frame (3).svg';
 import frame4W from '../../public/images/Frame (7).png';
 import frame5 from '../../public/images/fram.png';
 import frame5W from '../../public/images/framW.png';
@@ -114,9 +114,8 @@ const Dpi: React.FC = () => {
 
 // Component for each individual box
 
-
 interface AnimatedImageBoxProps {
-  id: number; // Add id prop
+  id: number; 
   normalImage: any;
   hoverImage: any;
   title: string;
@@ -134,12 +133,14 @@ const AnimatedImageBox: React.FC<AnimatedImageBoxProps> = ({
   const image1Ref = useRef<HTMLDivElement>(null);
   const image2Ref = useRef<HTMLDivElement>(null);
   const textContainerRef = useRef<HTMLDivElement>(null);
+  const whitetextContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const imageContainer = imageContainerRef.current;
     const image1 = image1Ref.current;
     const image2 = image2Ref.current;
     const textContainer = textContainerRef.current;
+    const whitetextContainer = whitetextContainerRef.current;
 
     // Animation timeline
     const hoverTimeline = gsap.timeline({ paused: true });
@@ -168,9 +169,15 @@ const AnimatedImageBox: React.FC<AnimatedImageBoxProps> = ({
       )
       .fromTo(
         textContainer,
-        { y: 50, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, ease: 'power2.out' },
-        '-=0.7'
+        { y: 50, opacity: 0 },  
+        { y: 0, opacity: 8, duration: 0.2, ease: 'power.inOut' }, 
+        '-=0.3'
+      )
+      .to(
+        whitetextContainer,
+        // { y: 50, opacity: 0 },  
+        { y: 0, opacity: 8, duration: 0.2, ease: 'power.inOut' }, 
+        '-=0.3'
       );
 
     const onMouseEnter = () => {
@@ -198,6 +205,7 @@ const AnimatedImageBox: React.FC<AnimatedImageBoxProps> = ({
     };
   }, [id]);
 
+
   return (
     <div
       ref={imageContainerRef}
@@ -224,7 +232,7 @@ const AnimatedImageBox: React.FC<AnimatedImageBoxProps> = ({
       <div className="absolute lg:left-6 left-2 top-5 z-10">
         <Image className='lg:h-14 lg:w-14 h-10 w-10'  src={normalImage} alt={title} />
       </div>
-      <div className="absolute lg:bottom-16 left-3 bottom-4  text-black z-10">
+      <div ref={whitetextContainerRef} className="absolute lg:bottom-16 left-3 bottom-4  text-black z-10">
         <p className="lg:text-xl text-sm  font-semibold">{title}</p>
       </div>
     </div>
@@ -237,13 +245,16 @@ const AnimatedImageBox: React.FC<AnimatedImageBoxProps> = ({
       <div className="absolute left-6 top-5 z-10">
         <Image className='lg:h-14 lg:w-14 h-10 w-10'  src={hoverImage} alt={title} />
       </div>
-      <div
-        ref={textContainerRef}
-        className="absolute flex flex-col gap-3 lg:bottom-10 bottom-2  px-4 text-white z-10"
+     
+     <div ref={textContainerRef} className='absolute lg:bottom-10 bottom-2'>
+     <div
+        
+        className=" flex flex-col gap-3   px-4 text-white z-10"
       >
         <p className=" lg:text-xl text-sm  font-semibold">{title}</p>
         <p className="lg:text-[16px] text-[12px]">{description}</p>
       </div>
+      </div> 
    </div></> }
     
     </div>

@@ -54,17 +54,17 @@ export default function Home() {
     if (window.innerWidth < 768) {
       gsap.to(imageRef.current, {
         opacity: 0,
-        duration: 0.5,
+        duration: 0.2,
         onComplete: () => setSrc(bannerImgMobile),
       });
-      gsap.to(imageRef.current, { opacity: 1, delay: 0.5, duration: 0.5 });
+      gsap.to(imageRef.current, { opacity: 1, delay: 0.2, duration: 0.2 });
     } else {
       gsap.to(imageRef.current, {
         opacity: 0,
-        duration: 0.5,
+        duration: 0.3,
         onComplete: () => setSrc(bannerImg),
       });
-      gsap.to(imageRef.current, { opacity: 1, delay: 0.5, duration: 0.5 });
+      gsap.to(imageRef.current, { opacity: 1, delay: 0.2, duration: 0.2 });
     }
   };
 
@@ -103,13 +103,13 @@ export default function Home() {
             </div>
             <div className="col-span-2 lg:pl-[39px] lg:border-l border-[#B1B1B1]/40">
               <div className="flex flex-col gap-5 text-sm">
-                <p className="lg:text-sm text-xs mt-2">
+                <p className="lg:text-[14px] text-xs mt-2">
                   The Kalp Decentra Foundation stands at the forefront of the
                   blockchain revolution, pioneering a new era of Digital Public
                   Infrastructure. We are not just building technology; we&apos;re
                   architecting the future of global digital interaction.
                 </p>
-                <div className="lg:text-md text-xs">
+                <div className="lg:text-[14px] text-xs">
                   <p>
                     Our mission? To create a decentralized ecosystem that&apos;s
                     as secure as it is inclusive, as innovative as it is
@@ -122,7 +122,7 @@ export default function Home() {
                     <p>• Global accessibility with local relevance</p>
                   </div>
                 </div>
-                <p className="lg:text-md text-xs">
+                <p className="lg:text-[14px] text-xs">
                   We&apos;re unique in our &apos;compliance-first&apos; approach,
                   embedding regulatory adherence into our DNA. Our ecosystem
                   isn&apos;t just about technology; it&apos;s about empowering

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import aboutMainImg from "../../public/images/aboutMain.jpg";
-import overlayImg from "../../public/images/ABOUT US.png";
+import overlayImg from "../../public/images/ABOUT US (1).png";
 import aboutUs1 from "../../public/images/aboutUs1.jpg";
 import aboutUs2 from "../../public/images/about.png";
 import member1 from "../../public/assets/about us/founding members/black and white/tapan.png";
@@ -83,8 +83,8 @@ const AboutUs: React.FC = () => {
                             className="lg:w-full object-cover lg:h-[100%]  h-[136px]"
                         />
                     </div>
-                    <div className="lg:text-[15px] text-[12px]">
-                        <p className="mt-4">
+                    <div className="lg:text-[14px] text-[12px]">
+                        <p className="mt-4 custom-text ">
                             Born from a vision of a more equitable digital future, the Kalp Decentra Foundation emerged in 2020 before formally consolidating in the year 2023 as a response to the growing need for secure, compliant, and inclusive blockchain infrastructure. Our founders, led by Tapan Sangal, recognized that the true potential of decentralized technology could only be realized if it was built on a foundation of regulatory compliance and community-driven governance.
                         </p>
                         <p className="mt-6">
@@ -130,7 +130,7 @@ const AboutUs: React.FC = () => {
                     <div className="mt-4">
                         <p className="lg:text-[20px] text-[15px]  font-semibold">Shubham Raj</p>
                         <p className="lg:text-md text-sm" >Head - CTO</p>
-                        <p className="mt-6 lg:text-[14px] text-sm">
+                        <p className="mt-6 lg:text-[14px] text-sm custom-text   ">
                             Lorem ipsum dolor sit amet consectetur. Elementum risus lorem proin dignissim neque. Et euismod sem risus sollicitudin a placerat libero viverra. Ut pharetra sit in libero tortor tellus. Mi a diam fringilla mauris.
                         </p>
                     </div>
@@ -153,26 +153,26 @@ const AboutUs: React.FC = () => {
 
                         />
                     </div>
-                    <div className="text-[15px]">
+                    <div className="text-[14px] custom-text">
                         <p className="mt-4 text-sm lg:text-md">At Kalp Decentra Foundation, our actions are guided by a set of core principles:</p>
                         <ul className="list-decimal list-inside text-start mt-4 pl-3 lg:space-y-4 space-y-3">
                             <li className="">
-                                <span className="text-sm lg:text-md">Compliance-First Approach:</span> We believe innovation thrives within ethical and legal frameworks.
+                                <span className="text-sm lg:text-md font-semibold">Compliance-First Approach:</span> We believe innovation thrives within ethical and legal frameworks.
                             </li>
                             <li className="">
-                                <span className="text-sm lg:text-md">Transparency:</span> We commit to open governance and clear communication in all our operations.
+                                <span className="text-sm lg:text-md font-semibold">Transparency:</span> We commit to open governance and clear communication in all our operations.
                             </li>
                             <li className="">
-                                <span className="text-sm lg:text-md">Inclusivity:</span> We strive to create technology that empowers all, regardless of background or resources.
+                                <span className="text-sm lg:text-md font-semibold">Inclusivity:</span> We strive to create technology that empowers all, regardless of background or resources.
                             </li>
                             <li className="">
-                                <span className="text-sm lg:text-md">Sustainability:</span> Our commitment to the environment is embedded in our technological solutions.
+                                <span className="text-sm lg:text-md font-semibold">Sustainability:</span> Our commitment to the environment is embedded in our technological solutions.
                             </li>
                             <li className="">
-                                <span className="text-sm lg:text-md">Innovation:</span> We continuously push the boundaries of whats possible in decentralized technology.
+                                <span className="text-sm lg:text-md font-semibold">Innovation:</span> We continuously push the boundaries of whats possible in decentralized technology.
                             </li>
                             <li className="">
-                                <span className="text-sm lg:text-md">Community-Driven:</span> We believe in the power of collective wisdom and shared governance.
+                                <span className="text-sm lg:text-md font-semibold">Community-Driven:</span> We believe in the power of collective wisdom and shared governance.
                             </li>
                         </ul>
                     </div>
@@ -195,7 +195,7 @@ const AboutUs: React.FC = () => {
 
                         />
                     </div>
-                    <div className="lg:text-[15px] text-[12px]">
+                    <div className="lg:text-[14px] text-[12px] custom-text">
                         <p className="mt-4">
                             The Kalp Decentra Foundation operates under a robust governance structure designed to ensure transparency, accountability, and community participation. Our framework includes:
                         </p>
@@ -237,15 +237,14 @@ const AboutUs: React.FC = () => {
                     {text?.map((data: any, index: any) => (
                         <div
                             key={index}
-                            className={`w-full lg:text-[23px] text-sm lg:pb-6 pb-5 ${index === 3 ? '' : 'lg:border-b border-[#B1B1B1]/40'} transition-transform duration-[1500ms] cursor-pointer ${data === select ? 'font-semibold ' : 'text-[#B1B1B1]/40'
+                            className={`w-full lg:text-[24px] text-sm lg:pb-6 pb-5 ${index === 3 ? '' : 'lg:border-b border-[#B1B1B1]/40'} transition-transform duration-[1500ms] cursor-pointer ${data === select ? 'font-bold ' : 'text-[#B1B1B1]/40'
                                 } lg:mb-6`}
                             onClick={() => handleChange(data)}
                         >
-                            <p className="whitespace-nowrap text-ellipsis">{data}</p>
+                            <p className={`${data === select ? 'font-semibold' : '' }`}>{data}</p>
                         </div>
                     ))}
                 </div>
-
 
                 {select === 'OUR STORY' ? <OurStory /> : null}
 
@@ -262,13 +261,13 @@ const AboutUs: React.FC = () => {
                 ) : null}
 
             </div>
-            {isDesktop ? <div className="absolute top-0 right-0 bg-[#000] pt-32 pb-8 h-full w-[7%] z-20 sm:hidden">
+             <div className="absolute top-0 right-0 bg-[#000] pt-32 pb-8 h-full w-[7%] z-20 ">
                 <Image
                     src={overlayImg}
                     alt="Overlay"
                     width={60}
                 />
-            </div> : null}
+            </div> 
             <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
         </div>
     );

@@ -26,6 +26,9 @@ body {
   background: #F4F4F4;
   width:100%
 }
+.custom-text{
+  font-weight: 100 !important;
+}
 
 @layer utilities {
   .text-balance {

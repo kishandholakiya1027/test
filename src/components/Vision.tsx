@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import vision from '../../public/images/vision2.jpg';
-import visionOld from '../../public/images/oldVision.jpeg';
+import visionOld from '../../public/images/oldVision.jpg';
 import Image from "next/image";
 
 export default function Vision() {

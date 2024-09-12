@@ -3,8 +3,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from 'next/image';
-import leftArrow from '../../public/images/mediaLeftIcon.png';
-import rightArrow from '../../public/images/mediaRightIcon.png';
+import blackPrev from '../../public/images/blackPrev.svg';
+import blackNext from '../../public/images/Button Icon (1).svg';
+import whitePrev from '../../public/images/Button Icon (2).svg';
+import whiteNext from '../../public/images/whiteNext.svg';
 import media1 from '../../public/assets/news and media/black and white/1.png';
 import media2 from '../../public/assets/news and media/black and white/2.png';
 import media3 from '../../public/assets/news and media/black and white/3.png';
@@ -17,7 +19,20 @@ const NewsMedia = () => {
   const [settig, setSettig] = useState<any>(null);
   const [isDesktop, setIsDesktop] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null); // Hover state
+  const [prevClicked, setPrevClicked] = useState(false);
+  const [nextClicked, setNextClicked] = useState(false);
 
+  const handlePrevClick = () => {
+    setPrevClicked(true);
+    setNextClicked(false);
+  };
+
+  const handleNextClick = () => {
+    setNextClicked(true);
+    setPrevClicked(false);
+  };
+console.log(prevClicked)
+console.log(nextClicked)
   useEffect(() => {
     setIsDesktop(window.innerWidth > 640);
     setSetting(window.innerWidth > 640 ? settings : mobSettings);
@@ -26,18 +41,27 @@ const NewsMedia = () => {
   const PrevArrow = ({ onClick }: any) => (
     <div 
       className={`absolute ${window.innerWidth > 640 ? 'top-[-70px] right-[44px]' : 'left-[128px] bottom-[-42px]'} z-10 cursor-pointer`}
-      onClick={onClick}
+      onClick={() => { onClick(),  
+        setPrevClicked(true);
+        setNextClicked(false); }}
     >
-      <Image src={leftArrow} alt="Previous" width={38} height={38} />
+      <Image src={prevClicked ? blackPrev : whitePrev} alt="Previous" width={38} height={38} />
     </div>
   );
 
   const NextArrow = ({ onClick }: any) => (
     <div 
       className={`absolute ${window.innerWidth > 640 ? 'top-[-70px] right-0' : 'bottom-[-42px] right-[130px]'} z-10 cursor-pointer`}
-      onClick={onClick}
+      onClick={() => { onClick();  
+         setNextClicked(true);
+        setPrevClicked(false);}}
+
     >
-      <Image src={rightArrow} alt="Next" width={38} height={38} />
+    {nextClicked ?
+      <Image src={whiteNext }  alt="Next" width={38} height={38} />
+    :
+      <Image src={blackNext }  alt="Next" width={38} height={38} />
+     }
     </div>
   );
 
@@ -121,7 +145,7 @@ const NewsMedia = () => {
               <div className="absolute bottom-0 left-0 right-0 h-[43rem] bg-gradient-to-t from-black via-transparent to-transparent"></div>
               
               {/* Text Content */}
-              <div className="absolute bottom-4 left-4 text-white">
+              <div className="absolute bottom-4 left-4 pb-7 px-2 text-white">
                 <h3 className="lg:text-lg text-sm font-semibold">{item.title}</h3>
                 <p className="text-sm mt-2">{item.description}</p>
               </div>

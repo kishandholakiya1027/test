@@ -17,7 +17,7 @@ function Accordion() {
   return (
     <div className={` text-white mx-6`}>
       <div
-        className={`absolute left-0 ml-1 lg:bottom-[75px] bottom-[53px] lg:w-[410px] w-[315px] py-4 transition-all duration-1000 ease-in-out backdrop-blur-sm ${activeIndex === 0 ? "bg-black/70" : "bg-black/50"
+        className={`absolute left-0 ml-1 lg:bottom-[80px] bottom-[53px] lg:w-[410px] w-[315px] py-4 transition-all duration-1000 ease-in-out backdrop-blur-sm ${activeIndex === 0 ? "bg-black/70" : "bg-black/50"
           }`}
         style={{ height: activeIndex === 0 ? "auto" : "69px" }} // Dynamically adjust height
       >
@@ -54,7 +54,7 @@ function Accordion() {
 
       {/* Benefits */}
       <div
-        className={` absolute lg:bottom-[75px] bottom-[53px] py-4 lg:w-[410px] w-[315px] lg:left-[429px] left-[325px] transition-all duration-1000 ease-in-out backdrop-blur-sm ${activeIndex === 1 ? "bg-black/70" : "bg-black/50"
+        className={` absolute lg:bottom-[80px] bottom-[53px] py-4 lg:w-[410px] w-[315px] lg:left-[429px] left-[325px] transition-all duration-1000 ease-in-out backdrop-blur-sm ${activeIndex === 1 ? "bg-black/70" : "bg-black/50"
           }`}
         style={{ height: activeIndex === 1 ? "auto" : "69px" }} // Dynamically adjust height
       >
@@ -91,7 +91,7 @@ function Accordion() {
 
       {/* Technology */}
       <div
-        className={` absolute ${isDesktop ? 'right-0 ' : 'left-[41rem] '} lg:w-[410px] w-[315px] lg:bottom-[75px] bottom-[53px] py-4 transition-all duration-1000 ease-in-out backdrop-blur-sm ${activeIndex === 2 ? "bg-black/70" : "bg-black/50"
+        className={` absolute ${isDesktop ? 'right-0 ' : 'left-[41rem] '} lg:w-[410px] w-[315px] lg:bottom-[80px] bottom-[53px] py-4 transition-all duration-1000 ease-in-out backdrop-blur-sm ${activeIndex === 2 ? "bg-black/70" : "bg-black/50"
           }`}
         style={{ height: activeIndex === 2 ? "auto" : "69px" }} // Dynamically adjust height
       >
