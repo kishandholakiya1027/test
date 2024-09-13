@@ -31,6 +31,7 @@ const NewsMedia = () => {
     setNextClicked(true);
     setPrevClicked(false);
   };
+  
 console.log(prevClicked)
 console.log(nextClicked)
   useEffect(() => {

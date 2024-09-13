@@ -40,7 +40,7 @@ const EcoSystem: React.FC = () => {
                         <Accordion />
 
                     </div>
-                    <div className="absolute bottom-0 bg-black w-full lg:h-20 h-12" >
+                    <div className="absolute bottom-0 bg-black w-full lg:h-20 h-12 z-10" >
                     {isDesktop ? <div className="flex  flex-wrap justify-center ">
                             {/* Content goes here */}
                             <div className="relative h-[1px] w-1/2 ">

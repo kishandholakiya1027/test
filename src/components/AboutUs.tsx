@@ -7,7 +7,7 @@ import member1 from "../../public/assets/about us/founding members/black and whi
 import member2 from "../../public/assets/about us/founding members/black and white/shubham.png";
 import cmember1 from "../../public/assets/about us/founding members/colored/tapan.png";
 import cmember2 from "../../public/assets/about us/founding members/colored/shubham.png";
-import caboutUs1 from "../../public/images/caboutUs1.jpg";
+import caboutUs1 from "../../public/images/caboutUs1.png";
 import caboutUs2 from "../../public/images/cabout.jpg";
 import governance from "../../public/images/about1.png";
 import cgovernance from "../../public/images/cabout1.png";

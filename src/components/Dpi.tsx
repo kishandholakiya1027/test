@@ -175,9 +175,8 @@ const AnimatedImageBox: React.FC<AnimatedImageBoxProps> = ({
       )
       .to(
         whitetextContainer,
-        // { y: 50, opacity: 0 },  
-        { y: 0, opacity: 8, duration: 0.2, ease: 'power.inOut' }, 
-        '-=0.3'
+        {y:0, scale: 0.8, duration: 0.2, ease: 'power2.inOut' }, // Scale down the font size on hover
+        '-=0.1'
       );
 
     const onMouseEnter = () => {

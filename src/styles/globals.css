@@ -38,3 +38,26 @@ body {
     font-weight: 100; 
   }
 }
+.slider-container{
+  height: 400px;
+}
+
+.slider-container .slick-center {
+  width: 367px !important;
+  margin: 0 6px; 
+  
+  /* transition: transform 0.7s ease; */
+}
+
+.slick-slide {
+  /* text-align: center; */
+   padding: 10px 0;
+   
+   
+
+}
+
+.slick-center {
+  height: 444px;
+  background-color: #fff; /* Make the center slide more prominent */
+}
