@@ -82,8 +82,8 @@ const handleViewMore = () => {
   return (
     <div>
         <div ref={aboutUsRef}  className='flex flex-col justify-center items-center lg:mt-28 mt-12' >
-        <h1 className="lg:text-3xl text-md font-bold mb-4">Meet the Team</h1>
-        <p className='lg:text-md text-sm mb-2 lg:mb-0 text-center' >Introducing the individuals making it happen</p>
+        <h1 className="lg:text-[32px] text-md font-bold mb-4">Meet the Team</h1>
+        <p className='lg:text-[16px] text-sm mb-2 lg:mb-0 text-center' >Introducing the individuals making it happen</p>
         </div >
         <div className='grid grid-cols-4 gap-4'>
         {data.slice(0, visibleItems).map((item:any, index:number) => (

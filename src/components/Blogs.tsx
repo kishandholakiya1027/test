@@ -39,12 +39,12 @@ const Blogs: React.FC = () => {
     return (
         <div>
             <div className='flex flex-col justify-center items-center lg:mt-28 mt-24' >
-                <h1 className="lg:text-3xl text-md font-bold mb-4">Blogs</h1>
+                <h1 className="lg:text-[32px] text-md font-bold mb-4">Blogs</h1>
                 <div className={`flex flex-wrap ${isDesktop ? 'justify-between' : 'justify-center'} w-full items-center`}>
                     {isDesktop ? <p className='text-md ' ></p> : null}
 
-                    <p className='text-md text-center lg:ml-28' >Dive into the Insights</p>
-                    {isDesktop ? <p className='lg:text-xl text-md underline decoration-1 cursor-pointer font-semibold transition-transform duration-300 group-hover:translate-x-2 mr-3' onClick={() => router.push('/blogs')} >View More</p> : null}
+                    <p className='text-[16px] text-center lg:ml-28' >Dive into the Insights</p>
+                    {isDesktop ? <p className='lg:text-[20px] text-md underline decoration-1 cursor-pointer font-semibold transition-transform duration-300 group-hover:translate-x-2 mr-3' onClick={() => router.push('/blogs')} >View More</p> : null}
                 </div>
                 <div className="grid grid-cols-3 gap-5 " >
                     {data?.map((item: any, index: number) => (
@@ -55,10 +55,10 @@ const Blogs: React.FC = () => {
                                 <Image src={hoveredIndex === index ? item.hoveredimage : item.image}  alt="kalp Logo" className="" />
                             </div>
                             <div>
-                                <p className="lg:text-[19px] text-md mt-4 font-semibold">
+                                <p className="lg:text-[20px] text-md mt-4 font-semibold">
                                     {item?.title}
                                 </p>
-                                <p className="mt-3 lg:text-sm text-[12px] ">
+                                <p className="mt-3 lg:text-sm text-[14px] ">
                                     {item?.description}  </p>
                                 <div className="flex items-center gap-1 mt-4 group">
                                     <Image

@@ -138,87 +138,88 @@ const AboutUs: React.FC = () => {
             </div>
         )
     }
-    const OurValues = () => {
-        return (
-            <div ref={containerRef} className="lg:w-[63%]">
-                <div className="transition-transform duration-[1500ms]">
-                    <div>
-                        <Image
-                            id="image-aboutUs2"
-                            src={hoveredImage === hoverImages.aboutUs2 ? hoverImages.aboutUs2 : aboutUs2}
-                            alt="Overlay"
-                            onMouseOver={() => handleMouseOver('aboutUs2')}
-                            onMouseOut={() => handleMouseOut('aboutUs2')}
-                            className="lg:w-full object-cover lg:h-[100%]  h-[136px]"
-
-                        />
-                    </div>
-                    <div className="text-[14px] custom-text">
-                        <p className="mt-4 text-sm lg:text-md">At Kalp Decentra Foundation, our actions are guided by a set of core principles:</p>
-                        <ul className="list-decimal list-inside text-start mt-4 pl-3 lg:space-y-4 space-y-3">
-                            <li className="">
-                                <span className="text-sm lg:text-md font-semibold">Compliance-First Approach:</span> We believe innovation thrives within ethical and legal frameworks.
-                            </li>
-                            <li className="">
-                                <span className="text-sm lg:text-md font-semibold">Transparency:</span> We commit to open governance and clear communication in all our operations.
-                            </li>
-                            <li className="">
-                                <span className="text-sm lg:text-md font-semibold">Inclusivity:</span> We strive to create technology that empowers all, regardless of background or resources.
-                            </li>
-                            <li className="">
-                                <span className="text-sm lg:text-md font-semibold">Sustainability:</span> Our commitment to the environment is embedded in our technological solutions.
-                            </li>
-                            <li className="">
-                                <span className="text-sm lg:text-md font-semibold">Innovation:</span> We continuously push the boundaries of whats possible in decentralized technology.
-                            </li>
-                            <li className="">
-                                <span className="text-sm lg:text-md font-semibold">Community-Driven:</span> We believe in the power of collective wisdom and shared governance.
-                            </li>
-                        </ul>
-                    </div>
+ const OurValues = () => {
+    return (
+        <div ref={containerRef} className="lg:w-[63%] w-full px-4">
+            <div className="transition-transform duration-[1500ms]">
+                <div>
+                    <Image
+                        id="image-aboutUs2"
+                        src={hoveredImage === hoverImages.aboutUs2 ? hoverImages.aboutUs2 : aboutUs2}
+                        alt="Overlay"
+                        onMouseOver={() => handleMouseOver('aboutUs2')}
+                        onMouseOut={() => handleMouseOut('aboutUs2')}
+                        className="lg:w-full w-full object-cover lg:h-[100%] h-[136px]"
+                    />
+                </div>
+                <div className="text-[14px] lg:text-xs custom-text">
+                    <p className="mt-4 text-xs lg:text-[14px]">At Kalp Decentra Foundation, our actions are guided by a set of core principles:</p>
+                    <ul className="list-decimal text-sm lg:text-[13px] list-inside text-start mt-4 pl-3 lg:space-y-3 space-y-2">
+                        <li className="text-sm lg:text-[14px]" >
+                            <span className="text-sm lg:text-[14px] font-semibold">Compliance-First Approach:</span> We believe innovation thrives within ethical and legal frameworks.
+                        </li>
+                        <li>
+                            <span className="text-sm lg:text-[14px] font-semibold">Transparency:</span> We commit to open governance and clear communication in all our operations.
+                        </li>
+                        <li>
+                            <span className="text-sm lg:text-[14px] font-semibold">Inclusivity:</span> We strive to create technology that empowers all, regardless of background or resources.
+                        </li>
+                        <li>
+                            <span className="text-sm lg:text-[14px] font-semibold">Sustainability:</span> Our commitment to the environment is embedded in our technological solutions.
+                        </li>
+                        <li>
+                            <span className="text-sm lg:text-[14px] font-semibold">Innovation:</span> We continuously push the boundaries of what's possible in decentralized technology.
+                        </li>
+                        <li>
+                            <span className="text-sm lg:text-[14px] font-semibold">Community-Driven:</span> We believe in the power of collective wisdom and shared governance.
+                        </li>
+                    </ul>
                 </div>
             </div>
-        )
-    }
-    const Governance = () => {
-        return (
-            <div ref={containerRef} className="lg:w-[62%]">
-                <div className="transition-transform duration-[1500ms]">
-                    <div>
-                        <Image
-                            id="image-governance"
-                            src={hoveredImage === hoverImages.governance ? hoverImages.governance : governance}
-                            alt="Overlay"
-                            onMouseOver={() => handleMouseOver('governance')}
-                            onMouseOut={() => handleMouseOut('governance')}
-                            className="lg:w-full object-cover lg:h-[100%]  h-[136px]"
+        </div>
+    );
+};
 
-                        />
-                    </div>
-                    <div className="lg:text-[14px] text-[12px] custom-text">
+const Governance = () => {
+    return (
+        <div ref={containerRef} className="lg:w-[62%] w-full px-4">
+            <div className="transition-transform duration-[1500ms]">
+                <div>
+                    <Image
+                        id="image-governance"
+                        src={hoveredImage === hoverImages.governance ? hoverImages.governance : governance}
+                        alt="Overlay"
+                        onMouseOver={() => handleMouseOver('governance')}
+                        onMouseOut={() => handleMouseOut('governance')}
+                        className="lg:w-full w-full object-cover lg:h-[100%] h-[136px]"
+                    />
+                </div>
+                <div className="text-[12px] lg:text-[13px] custom-text">
+                    <p className="mt-4">
+                        The Kalp Decentra Foundation operates under a robust governance structure designed to ensure transparency, accountability, and community participation. Our framework includes:
+                    </p>
+                    <ul className="list-disc text-start pl-3 lg:py-5 lg:text-[13px]">
+                        <li>A diverse Board of Directors with expertise across relevant fields</li>
+                        <li>Multiple specialized committees overseeing various aspects of our operations</li>
+                        <li>A two-tier grievance redressal mechanism to ensure fair resolution of issues</li>
+                        <li>Regular internal and external audits to maintain the highest standards of operation</li>
+                    </ul>
+                    <p className="">
+                        Our governance model is designed to evolve with the needs of our community and the changing landscape of blockchain technology. We believe in the power of decentralized decision-making, balanced with the need for expert guidance and regulatory compliance.
+                    </p>
+                    <p>
+                        For a detailed look at our governance structure, please review our full Governance Framework Document.
+                    </p>
+                    {isDesktop ? (
                         <p className="mt-4">
-                            The Kalp Decentra Foundation operates under a robust governance structure designed to ensure transparency, accountability, and community participation. Our framework includes:
-                        </p>
-                        <ul className="list-disc text-start pl-3">
-                            <li className="">A diverse Board of Directors with expertise across relevant fields</li>
-                            <li className="">Multiple specialized committees overseeing various aspects of our operations</li>
-                            <li className="">A two-tier grievance redressal mechanism to ensure fair resolution of issues</li>
-                            <li className="">Regular internal and external audits to maintain the highest standards of operation</li>
-                        </ul>
-                        <p className="mt-4">
-                            Our governance model is designed to evolve with the needs of our community and the changing landscape of blockchain technology. We believe in the power of decentralized decision-making, balanced with the need for expert guidance and regulatory compliance.
-                        </p>
-                        <p className="">
-                            For a detailed look at our governance structure, please review our full Governance Framework Document.
-                        </p>
-                        {isDesktop ? <p className="mt-4">
                             Join us in our mission to create a more equitable, secure, and innovative digital future. Together, we are not just building technology – we are shaping the future of global digital interaction.
-                        </p> : null}
-                    </div>
+                        </p>
+                    ) : null}
                 </div>
             </div>
-        )
-    }
+        </div>
+    );
+};
 
     return (
         <div className="relative w-full mt-12 lg:mt-0 lg:h-screen">

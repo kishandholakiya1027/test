@@ -37,9 +37,9 @@ function Accordion() {
     <div className={`text-white mx-6`}>
       {/* Key Components */}
       <div
-        className={`absolute left-0 ml-1 lg:bottom-[80px] bottom-[53px] lg:w-[410px] w-[315px] py-4 transition-all duration-1000 ease-in-out backdrop-blur-sm ${activeIndex === 0 ? "bg-black/70" : "bg-black/50"}`}
-        style={{ height: activeIndex === 0 ? "auto" : "69px" }} // Dynamically adjust height
-      >
+    className={`absolute left-0 ml-1 lg:bottom-[80px] bottom-[53px] lg:w-[32%] w-[70%] py-4 transition-all duration-1000 ease-in-out backdrop-blur-sm ${activeIndex === 0 ? "bg-black/70" : "bg-black/50"}`}
+    style={{ height: activeIndex === 0 ? "auto" : "69px" }}
+  >
         <button
           className="w-full text-left px-4 lg:text-2xl lg:font-bold font-semibold flex justify-between gap-10 items-center"
           onClick={() => toggleAccordion(0)}
@@ -75,9 +75,9 @@ function Accordion() {
 
       {/* Benefits */}
       <div
-        className={`absolute lg:bottom-[80px] bottom-[53px] py-4 lg:w-[410px] w-[315px] lg:left-[429px] left-[325px] transition-all duration-1000 ease-in-out backdrop-blur-sm ${activeIndex === 1 ? "bg-black/70" : "bg-black/50"}`}
-        style={{ height: activeIndex === 1 ? "auto" : "69px" }} // Dynamically adjust height
-      >
+    className={`absolute lg:bottom-[80px] bottom-[53px] py-4 lg:w-[32%] w-[70%] lg:left-[34%] left-[40%] transition-all duration-1000 ease-in-out backdrop-blur-sm ${activeIndex === 1 ? "bg-black/70" : "bg-black/50"}`}
+    style={{ height: activeIndex === 1 ? "auto" : "69px" }}
+  >
         <button
           className="w-full text-left lg:text-2xl lg:font-bold font-semibold px-4 flex justify-between items-center"
           onClick={() => toggleAccordion(1)}
@@ -113,9 +113,9 @@ function Accordion() {
 
       {/* Technology */}
       <div
-        className={`absolute ${isDesktop ? 'left-[856px]' : 'left-[41rem]'} lg:w-[410px] w-[315px] lg:bottom-[80px] bottom-[53px] py-4 transition-all duration-1000 ease-in-out backdrop-blur-sm ${activeIndex === 2 ? "bg-black/70" : "bg-black/50"}`}
-        style={{ height: activeIndex === 2 ? "auto" : "69px" }} // Dynamically adjust height
-      >
+    className={`absolute lg:bottom-[80px] bottom-[53px] py-4 lg:w-[32%] w-[70%] lg:left-[68%] left-[70%] transition-all duration-1000 ease-in-out backdrop-blur-sm ${activeIndex === 2 ? "bg-black/70" : "bg-black/50"}`}
+    style={{ height: activeIndex === 2 ? "auto" : "69px" }}
+  >
         <button
           className="w-full text-left lg:text-2xl lg:font-bold font-semibold px-4 flex justify-between items-center"
           onClick={() => toggleAccordion(2)}

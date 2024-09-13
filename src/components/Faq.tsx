@@ -52,8 +52,8 @@ const Faq: React.FC = () => {
   return (
     <div>
         <div className='flex flex-col justify-center items-center lg:mt-28 mt-12 ' >
-        <h1 className="lg:text-3xl text-md font-bold mb-4">Frequently Asked Questions</h1>
-        <p className='text-[15px] text-center' >Common Queries Addressed for Quick Understanding</p>
+        <h1 className="lg:text-[32px] text-md font-bold mb-4">Frequently Asked Questions</h1>
+        <p className='text-[16px] text-center' >Common Queries Addressed for Quick Understanding</p>
         </div>
       
         <div className=" mx-auto mt-16">
@@ -74,7 +74,7 @@ const Faq: React.FC = () => {
                  </div>
              
              </button>
-             {openAccordionIndex === index && <div className="pb-4 text-sm ">{item.content}</div>}
+             {openAccordionIndex === index && <div className="pb-4 text-[14px] ">{item.content}</div>}
            </div>
       ))}
     </div>

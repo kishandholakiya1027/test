@@ -80,11 +80,11 @@ const boxData = [
 const Dpi: React.FC = () => {
   return (
     <div className="lg:mt-20 mt-12 w-full">
-      <div className="lg:flex flex-col gap-3 justify-center lg:px-16 text-center">
-        <h1 className="lg:text-3xl text-md font-bold mb-4">
+      <div className="lg:flex flex-col gap-3 justify-center lg:px-12 text-center">
+        <h1 className="lg:text-[32px] text-md font-bold mb-4">
           Digital Public Infrastructure (DPI)
         </h1>
-        <p className="lg:text-md text-sm mb-2 lg:mb-0 text-center">
+        <p className="lg:text-[16px] text-sm mb-2 lg:mb-0 text-center">
           <span className="font-semibold">POWERED BY BLOCKCHAIN</span> by
           blockchain delivers secure, transparent, and decentralized access to
           public services, enhancing trust and efficiency. By leveraging
@@ -146,6 +146,14 @@ const AnimatedImageBox: React.FC<AnimatedImageBoxProps> = ({
     const hoverTimeline = gsap.timeline({ paused: true });
 
     hoverTimeline
+    .to(whitetextContainer, {
+      y: -30, 
+      opacity:0,// Scale down
+      duration:0.1,
+      ease: 'power2.out',
+      onStart: () => console.log('Animation started'),
+      onComplete: () => console.log('Animation completed')
+    })
       .to(image1, {
         width: 0,
         duration: 1,
@@ -175,7 +183,7 @@ const AnimatedImageBox: React.FC<AnimatedImageBoxProps> = ({
       )
       .to(
         whitetextContainer,
-        {y:0, scale: 0.8, duration: 0.2, ease: 'power2.inOut' }, // Scale down the font size on hover
+        { y: 0, duration: 0.1, ease: 'power2.out' }, // Faster movement and adjusted scale
         '-=0.1'
       );
 
@@ -231,8 +239,8 @@ const AnimatedImageBox: React.FC<AnimatedImageBoxProps> = ({
       <div className="absolute lg:left-6 left-2 top-5 z-10">
         <Image className='lg:h-14 lg:w-14 h-10 w-10'  src={normalImage} alt={title} />
       </div>
-      <div ref={whitetextContainerRef} className="absolute lg:bottom-16 left-3 bottom-4  text-black z-10">
-        <p className="lg:text-xl text-sm  font-semibold">{title}</p>
+      <div ref={whitetextContainerRef} className="absolute lg:bottom-16 left-5 bottom-4  text-black z-10">
+        <p className="lg:text-[20px] text-sm  font-semibold">{title}</p>
       </div>
     </div>
 
@@ -250,7 +258,7 @@ const AnimatedImageBox: React.FC<AnimatedImageBoxProps> = ({
         
         className=" flex flex-col gap-3   px-4 text-white z-10"
       >
-        <p className=" lg:text-xl text-sm  font-semibold">{title}</p>
+        <p className=" lg:text-[20px] text-sm  font-semibold">{title}</p>
         <p className="lg:text-[16px] text-[12px]">{description}</p>
       </div>
       </div> 
