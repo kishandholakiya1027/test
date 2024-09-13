@@ -168,7 +168,7 @@ const AboutUs: React.FC = () => {
                             <span className="text-sm lg:text-[14px] font-semibold">Sustainability:</span> Our commitment to the environment is embedded in our technological solutions.
                         </li>
                         <li>
-                            <span className="text-sm lg:text-[14px] font-semibold">Innovation:</span> We continuously push the boundaries of what's possible in decentralized technology.
+                            <span className="text-sm lg:text-[14px] font-semibold">Innovation:</span> We continuously push the boundaries of what&apos;s possible in decentralized technology.
                         </li>
                         <li>
                             <span className="text-sm lg:text-[14px] font-semibold">Community-Driven:</span> We believe in the power of collective wisdom and shared governance.
