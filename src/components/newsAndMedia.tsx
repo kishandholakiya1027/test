@@ -146,9 +146,9 @@ console.log(nextClicked)
               <div className="absolute bottom-0 left-0 right-0 h-[43rem] bg-gradient-to-t from-black via-transparent to-transparent"></div>
               
               {/* Text Content */}
-              <div className="absolute bottom-4 left-4 pb-7 px-2 text-white">
-                <h3 className="lg:text-lg text-sm font-semibold">{item.title}</h3>
-                <p className="text-sm mt-2">{item.description}</p>
+              <div className="absolute lg:bottom-4 bottom-0 left-4 pb-7 px-2 text-white">
+                <h3 className="lg:text-lg text-xs font-semibold">{item.title}</h3>
+                <p className="lg:text-sm text-xs mt-2">{item.description}</p>
               </div>
               
               {/* Research Tag */}
