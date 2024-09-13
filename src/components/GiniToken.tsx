@@ -78,7 +78,7 @@ export default function GiniToken() {
              loading="lazy" 
                
 
-                className="transition-transform duration-4000 ease-in-out max-w-[530px] max-h-[300px] "/>
+                className="transition-transform duration-4000 ease-in-out lg:max-w-[530px] max-h-[300px] "/>
                 </div>
                 <div className="flex flex-col lg:flex-row lg:gap-8 gap-6 items-start lg:px-4 px-2 justify-between lg:mt-10 mt-6">
   {/* Text Section */}
