@@ -120,9 +120,16 @@ export default function Blogs() {
                                         <p className="lg:mt-4 mt-3 lg:text-[15px] text-[12px]">
                                             How do you create compelling presentations that wow your colleagues and impress your managers?
                                         </p>
-                                        <p className="lg:text-2xl text-xl lg:mt-10 mt-6 underline cursor-pointer font-semibold transition-transform duration-300 group-hover:translate-x-2" onClick={() => router.push('/blogDetail')}>
-                                            Read More
-                                        </p>
+                                        <div className="flex items-center gap-1 mt-4 group">
+                                                <Image
+                                                    src={arrow}
+                                                    alt="Arrow Icon"
+                                                    className="h-3 transform -translate-x-4 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
+                                                />
+                                                <p className="lg:text-2xl text-xl underline decoration-1 decoration-1 cursor-pointer font-semibold transition-transform duration-300 group-hover:translate-x-2">
+                                                    Read More
+                                                </p>
+                                            </div>
                                     </div>
                                     <div className="lg:mt-24 mt-8" >
                                         <Image
@@ -136,9 +143,16 @@ export default function Blogs() {
                                             </p>
                                             <p className="mt-4 text-[12px]">
                                                 A grid system is a design tool used to arrange content on a webpage...</p>
-                                            <p className=" mt-4 text-xl underline cursor-pointer font-semibold transition-transform duration-300 group-hover:translate-x-2" onClick={() => router.push('/blogDetail')}>
-                                                Read More
-                                            </p>
+                                                <div className="flex items-center gap-1 mt-4 group">
+                                                <Image
+                                                    src={arrow}
+                                                    alt="Arrow Icon"
+                                                    className="h-3 transform -translate-x-4 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
+                                                />
+                                                <p className="lg:text-2xl text-xl underline decoration-1 decoration-1 cursor-pointer font-semibold transition-transform duration-300 group-hover:translate-x-2">
+                                                    Read More
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -201,9 +215,16 @@ export default function Blogs() {
                                         </p>
                                         <p className="mt-4 text-[15px]">
                                             A grid system is a design tool used to arrange content on a webpage. It is a series of vertical and horizontal lines that create a matrix of intersecting points, which can be used to align and organize page elements. Grid systems are used to create a consistent look and feel across a website, and can help to make the layout more visually appealing and easier to navigate.                                        </p>
-                                        <p className=" mt-4 text-2xl underline cursor-pointer font-semibold transition-transform duration-300 group-hover:translate-x-2" onClick={() => router.push('/blogDetail')}>
-                                            Read More
-                                        </p>
+                                            <div className="flex items-center gap-1 mt-4 group">
+                                                <Image
+                                                    src={arrow}
+                                                    alt="Arrow Icon"
+                                                    className="h-3 transform -translate-x-4 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
+                                                />
+                                                <p className="lg:text-2xl text-xl underline decoration-1 decoration-1 cursor-pointer font-semibold transition-transform duration-300 group-hover:translate-x-2">
+                                                    Read More
+                                                </p>
+                                            </div>
                                     </div>
                                 </div>
                             </div>

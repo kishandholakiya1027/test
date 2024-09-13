@@ -103,26 +103,26 @@ export default function Home() {
             </div>
             <div className="col-span-2 lg:pl-[39px] lg:border-l border-[#B1B1B1]/40">
               <div className="flex flex-col gap-5 text-sm">
-                <p className="lg:text-[14px] text-xs mt-2">
+                <p className="lg:text-[14px] text-xs mt-2 leading-[21px]">
                   The Kalp Decentra Foundation stands at the forefront of the
                   blockchain revolution, pioneering a new era of Digital Public
                   Infrastructure. We are not just building technology; we&apos;re
                   architecting the future of global digital interaction.
                 </p>
                 <div className="lg:text-[14px] text-xs">
-                  <p>
+                  <p className="leading-[21px]">
                     Our mission? To create a decentralized ecosystem that&apos;s
                     as secure as it is inclusive, as innovative as it is
                     compliant.
                   </p>
-                  <p className="font-bold">At Kalp, we believe in:</p>
-                  <div className="flex flex-col">
+                  <p className="font-bold leading-[21px]">At Kalp, we believe in:</p>
+                  <div className="flex flex-col leading-[21px]">
                     <p>• Decentralization with accountability</p>
                     <p>• Innovation within regulatory frameworks</p>
                     <p>• Global accessibility with local relevance</p>
                   </div>
                 </div>
-                <p className="lg:text-[14px] text-xs">
+                <p className="lg:text-[14px] text-xs leading-[21px]">
                   We&apos;re unique in our &apos;compliance-first&apos; approach,
                   embedding regulatory adherence into our DNA. Our ecosystem
                   isn&apos;t just about technology; it&apos;s about empowering
