@@ -26,7 +26,7 @@ export default function Home() {
 
   useEffect(() => {
     if (window.innerWidth < 768) {
-      setSrc(bannerImgMobile);
+      setSrc(bannerImg);
     } else {
       setSrc(bannerImg);
     }
@@ -72,7 +72,7 @@ export default function Home() {
     <>
       <div className="w-full">
         <Header />
-        <div className="lg:px-10 px-4">
+        <div className="xl:max-w-[1360px] max-w-full mx-auto w-full px-[20px] lg:px-0">
           <div
             className="relative"
             onMouseOver={handleMouseOver}
@@ -83,21 +83,19 @@ export default function Home() {
             <Image
               src={src}
               alt="kalp Logo"
-              className="transition-opacity duration-500 ease-in-out"
+              className="transition-opacity duration-500 ease-in-out sm:h-full h-[270px] object-cover object-center"
               ref={imageRef}
             />
-            <Image
-              src={edgeImg}
-              alt="kalp Logo"
-              className="absolute lg:bottom-4 bottom-3 lg:left-4 left-2 lg:w-[35%] w-[60%] transition-opacity duration-100000 ease-in-out"
-            />
+            <div className="sm:max-h-[248px] max-h-[216px] max-w-[213px] sm:py-[40px] sm:px-[24px] p-[16px] sm:max-w-[485px] bg-[#00000099] absolute sm:bottom-4 sm:left-4 bottom-2 left-2">
+              <div className="text-[#fff] xl:text-[48px] lg:text-[40px] sm:text-[32px] text-[24px] xl:leading-[56px] lg:leading-[48px] sm:leading-[40px] leading-[28px]">Empowering Global Digital Equity</div>
+            </div>
           </div>
           <div className="lg:grid grid-cols-3 lg:mt-28 mt-6">
             <div className="col-span-1">
               <p className="lg:text-[32px] text-md font-bold">
                 About KALP Foundation
               </p>
-              <p className="lg:text-2xl text-sm lg:mt-4 mt-2 lg:mr-28">
+              <p className="lg:text-2xl text-sm lg:mt-4 mt-2 max-w-[384px]">
                 Architecting the Future of Digital Inclusivity
               </p>
             </div>

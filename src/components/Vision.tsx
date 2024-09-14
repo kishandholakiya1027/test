@@ -17,10 +17,10 @@ export default function Vision() {
   };
 
   return (
-    <div className="lg:relative w-full lg:h-screen mt-12 lg:mt-0 flex items-center justify-center overflow-hidden">
+    <div className="lg:relative w-full lg:h-screen my-12 xl:my-[120px] md:my-[80px] flex items-center justify-center overflow-hidden">
      {
      isDesktop ?      <div
-      className="lg:relative w-[90vw] max-w-[540px] h-[70vh] max-h-[400px]"
+      className="lg:relative w-full max-w-[540px] h-full max-h-[400px]"
       onMouseEnter={handleMouseEnter}
     >
       {/* Text behind the image */}
@@ -40,7 +40,7 @@ export default function Vision() {
       <Image
         src={transitioned ? vision : visionOld}
         alt="New"
-        className={`lg:absolute inset-0 z-10 w-full h-full object-cover transition-transform duration-[1500ms] ${transitioned ? 'translate-x-[-65%]' : 'translate-x-0'}`}
+        className={``}
       />
     </div> : 
          <div
